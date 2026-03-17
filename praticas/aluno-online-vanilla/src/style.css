@@ -10,6 +10,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: normal;
+    
     --cor-fundo: #e9e9e9;
     --cor-borda: #b9b9b9;
     --cor-texto: #303030;
@@ -33,7 +34,6 @@ aside {
 aside > header {
     display: flex;
     justify-content: space-between;
-    gap: 0px;
 }
 
 ul {
@@ -103,7 +103,8 @@ p {
     margin-bottom: 8px;
 }
 
-@media (min-width: 768px) {
+@media (min-width >= 768px) {
+
     main {
         margin: 16px auto;
         margin-right: 240px;
