@@ -103,8 +103,7 @@ p {
     margin-bottom: 8px;
 }
 
-@media (min-width >= 768px) {
-
+@media (width >= 768px) {
     main {
         margin: 16px auto;
         margin-right: 240px;
