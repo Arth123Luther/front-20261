@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -81,7 +82,7 @@ h2 {
     margin-bottom: 24px;
 }
 
-section {
+article {
     border: 1px solid var(--cor-borda);
     border-radius: 8px;
     padding: 0;
