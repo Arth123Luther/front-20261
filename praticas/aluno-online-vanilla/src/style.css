@@ -76,6 +76,24 @@ h1 {
     margin: 32px auto;
 }
 
+.mainL > /*.card >*/ header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    margin: 100px auto;
+}
+
+.logo-login {
+    height: 90px;
+    width: 90px;
+    margin: 16px auto;
+}
+
+.h1L {
+    margin: 0px auto;
+}
+
 h2 {
     text-align: center;
     margin: 32px auto;
@@ -88,6 +106,13 @@ article {
     padding: 0;
     margin-bottom: 16px;
 }
+
+/*.card {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+}
+*/
 
 h3 {
     text-align: left;
@@ -107,6 +132,11 @@ p {
     main {
         margin: 16px auto;
         margin-right: 240px;
+        max-width: 800px;
+    }
+
+    .mainL {
+        margin: 16px auto;
         max-width: 800px;
     }
 
