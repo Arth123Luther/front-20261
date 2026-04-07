@@ -1,21 +1,21 @@
 
 function Tabela(props) {
     return <>
-        <h3>{props.titulo}</h3>
+        {props.titulo && <h3>{props.titulo}</h3>}
         <table>
             <thead>
-                <th>
-                    <td>Coluna 1</td>
-                    <td>Coluna 2</td>
-                    <td>Coluna 3</td>
-                </th>
+                <tr>
+                    {props.colunas.map((item, index) => (
+                        <td key={index}>{item}</td>
+                    ))}
+                </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Valor 1</td>
-                    <td>Valor 2</td>
-                    <td>Valor 3</td>
-                </tr>
+                    {props.dados.map((linha, i) => (
+                        <tr key={i}>{linha.map((coluna, j) => 
+                            (<td key={j}>{coluna}</td>))}
+                        </tr>
+                    ))}
             </tbody>
         </table>
     </>
