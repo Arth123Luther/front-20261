@@ -1,15 +1,17 @@
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import Tabela from "../components/Tabela";
+import Main from "../components/Main";
 
 function Notas() {
     return (
-        <div>
+        <>
             <Sidebar />
-            <main>
-                <Topbar />
-                <h2>Minhas Notas</h2>
-            </main>
-        </div>
+            <Main titulo="Minhas Notas" subtitulo="Histórico de Notas por Semestre">
+                    <Tabela titulo="2026.1" />
+                    <Tabela titulo="2025.2" />
+                    <Tabela titulo="2025.1" />
+            </Main>
+        </>
     );
 }
 
