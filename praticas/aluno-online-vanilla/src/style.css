@@ -20,6 +20,60 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    color: var(--cor-texto);
+}
+
+.headerL {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.input {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-texto);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.h2L {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    font-size: 1rem;
+    font-weight: normal;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.erro {
+    color: red;
+}
+
+.mainL {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 24px 16px;
+    justify-content: center;
+}
+
+.cardL {
+    border: 1px solid var(--cor-fundo);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    max-width: 600px;
+    padding: 1rem;
 }
 
 aside {
@@ -76,14 +130,6 @@ h1 {
     margin: 32px auto;
 }
 
-.mainL > header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0;
-    margin: 100px auto;
-}
-
 .logo-login {
     height: 90px;
     width: 90px;
@@ -122,6 +168,10 @@ p {
 }
 
 @media (width >= 768px) {
+    body {
+        flex-direction: row;
+    }
+
     main {
         margin: 16px auto;
         margin-right: 240px;
@@ -129,8 +179,7 @@ p {
     }
 
     .mainL {
-        margin: 16px auto;
-        max-width: 800px;
+        padding: 40px 60px;
     }
 
     main > header {
