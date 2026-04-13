@@ -23,7 +23,7 @@ body {
     color: var(--cor-texto);
 }
 
-.headerL {
+.header-l {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,7 @@ body {
     padding: 10px 15px;
 }
 
-.h2L {
+.h2-l {
     display: flex;
     flex-direction: column;
     font-family: Arial;
@@ -59,7 +59,7 @@ body {
     color: red;
 }
 
-.mainL {
+.main-l {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -67,7 +67,7 @@ body {
     justify-content: center;
 }
 
-.cardL {
+.card-l {
     border: 1px solid var(--cor-fundo);
     border-radius: 8px;
     margin-bottom: 20px;
@@ -136,7 +136,7 @@ h1 {
     margin: 16px auto;
 }
 
-.h1L {
+.h1-l {
     margin: 0px auto;
 }
 
@@ -178,7 +178,7 @@ p {
         max-width: 800px;
     }
 
-    .mainL {
+    .main-l {
         padding: 40px 60px;
     }
 
