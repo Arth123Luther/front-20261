@@ -2,8 +2,7 @@ import Card from '../components/Card.jsx';
 import Main from '../components/Main.jsx';
 import Sidebar from '../components/Sidebar.jsx';
 
-
-function Dashboard() {
+function Dashboard(props) {
     const avisos = [
         "Eleição para representante da turma",
         "Inscrição para o projeto de extensão"
@@ -21,7 +20,7 @@ function Dashboard() {
 
     return (
         <>
-            <Sidebar />
+            <Sidebar navegaPara={props.navegaPara} />
             <Main titulo="Olá, Aluno" subtitulo="Bem-vindo ao portal do aluno">
                 <Card titulo="Mural do Aluno" itens={avisos}/>
                 <Card titulo="Calendário Acadêmico" itens={datas}/>
