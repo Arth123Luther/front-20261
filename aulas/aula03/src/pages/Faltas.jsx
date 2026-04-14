@@ -1,16 +1,17 @@
+import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import Tabela from "../components/Tabela";
 
-function Faltas() {
+function Faltas(props) {
     return (
-        <div>
-            <Sidebar />
-            <main>
-                <Topbar />
-                <h2>Minhas Faltas</h2>
-                <section></section>
-            </main>
-        </div>
+        <>
+            <Sidebar navegaPara={props.navegaPara} />
+            <Main titulo="Minhas Faltas" subtitulo="Histórico de Faltas por Semestre">
+                <Tabela titulo="2026.1" colunas={[]} dados={[]}/>
+                <Tabela titulo="2025.2" colunas={[]} dados={[]}/>
+                <Tabela titulo="2025.1" colunas={[]} dados={[]}/>
+            </Main>
+        </>
     );
 }
 

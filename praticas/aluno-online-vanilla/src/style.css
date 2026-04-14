@@ -20,6 +20,60 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    color: var(--cor-texto);
+}
+
+.header-l {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.input {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-texto);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.h2-l {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    font-size: 1rem;
+    font-weight: normal;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.erro {
+    color: red;
+}
+
+.main-l {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 24px 16px;
+    justify-content: center;
+}
+
+.card-l {
+    border: 1px solid var(--cor-fundo);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    max-width: 600px;
+    padding: 1rem;
 }
 
 aside {
@@ -76,6 +130,16 @@ h1 {
     margin: 32px auto;
 }
 
+.logo-login {
+    height: 90px;
+    width: 90px;
+    margin: 16px auto;
+}
+
+.h1-l {
+    margin: auto;
+}
+
 h2 {
     text-align: center;
     margin: 32px auto;
@@ -104,10 +168,18 @@ p {
 }
 
 @media (width >= 768px) {
+    body {
+        flex-direction: row;
+    }
+
     main {
         margin: 16px auto;
         margin-right: 240px;
         max-width: 800px;
+    }
+
+    .main-l {
+        padding: 40px 60px;
     }
 
     main > header {

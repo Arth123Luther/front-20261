@@ -1,16 +1,15 @@
+import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import Tabela from "../components/Tabela";
 
-function Boletos() {
+function Boletos(props) {
     return (
-        <div>
-            <Sidebar />
-            <main>
-                <Topbar />
-                <h2>Meus Boletos</h2>
-                <section></section>
-            </main>
-        </div>
+        <>
+            <Sidebar navegaPara={props.navegaPara} />
+            <Main titulo="Meus Boletos" subtitulo="Histórico de Pagamentos">
+                <Tabela colunas={[]} dados={[]}/>
+            </Main>
+        </>
     );
 }
 
