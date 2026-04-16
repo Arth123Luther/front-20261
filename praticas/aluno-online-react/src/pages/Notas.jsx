@@ -1,9 +1,10 @@
+import './Notas.css';
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 
 function Notas() {
     return (
-        <div>
+        <div className="notas-wrapper">
             <Sidebar />
             <main>
                 <Topbar />

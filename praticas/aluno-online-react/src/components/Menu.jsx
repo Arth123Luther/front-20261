@@ -1,17 +1,18 @@
+import './Menu.css';
 
 function Menu() {
     return (
-    <nav>
-        <ul>
-          <li>Dashboard</li>
-          <li>Notas</li>
-          <li>Faltas</li>
-          <li>Boletos</li>
-          <li>Requerimentos</li>
-          <li>Sair</li>
-        </ul>
-    </nav>
-      );
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Notas</a></li>
+                <li><a href="#">Faltas</a></li>
+                <li><a href="#">Boletos</a></li>
+                <li><a href="#">Requerimentos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    );
 }
 
 export default Menu;

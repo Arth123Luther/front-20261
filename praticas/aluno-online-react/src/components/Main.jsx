@@ -1,3 +1,4 @@
+import './Main.css';
 import Topbar from './Topbar';
 import Card from './Card';
 

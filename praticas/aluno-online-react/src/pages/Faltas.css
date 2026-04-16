@@ -1,0 +1,9 @@
+
+.faltas-wrapper {
+    display: flex;
+}
+
+.faltas-wrapper main h2 {
+    text-align: center;
+    margin: 16px auto 24px;
+}

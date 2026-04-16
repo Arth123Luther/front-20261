@@ -1,0 +1,9 @@
+
+.notas-wrapper {
+    display: flex;
+}
+
+.notas-wrapper main h2 {
+    text-align: center;
+    margin: 16px auto 24px;
+}

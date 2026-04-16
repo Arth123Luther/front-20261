@@ -1,9 +1,10 @@
+import './Requerimentos.css';
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 
 function Requerimentos() {
     return (
-        <div>
+        <div className="requerimentos-wrapper">
             <Sidebar />
             <main>
                 <Topbar />

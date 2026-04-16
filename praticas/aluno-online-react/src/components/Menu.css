@@ -1,0 +1,20 @@
+
+nav ul {
+    list-style: outside;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style-type: disc;
+    margin: 4px 0;
+    padding: 6px 0 6px 24px;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    padding: 4px 8px;
+    display: block;
+    font-weight: 600;
+}

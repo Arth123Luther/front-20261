@@ -1,0 +1,31 @@
+
+.tabela-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tabela-section article {
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-section h3 {
+    text-align: left;
+    padding: 8px 12px;
+    background-color: var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-borda);
+    margin: 0;
+}
+
+.tabela-section ul {
+    list-style: none;
+    padding: 8px 12px;
+    margin: 0;
+}
+
+.tabela-section li {
+    padding: 4px 0;
+    margin: 0;
+}

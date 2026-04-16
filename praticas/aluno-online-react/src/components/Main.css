@@ -1,0 +1,22 @@
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8px;
+}
+
+main h2 {
+    text-align: center;
+    margin: 8px 0;
+    font-size: 1.5rem;
+}
+
+@media (width >= 768px) {
+    main {
+        margin-left: 328px;
+        margin-right: 16px;
+        max-width: 800px;
+    }
+}
