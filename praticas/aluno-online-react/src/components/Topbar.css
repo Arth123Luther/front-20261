@@ -8,11 +8,11 @@ main > header {
 
 main > header h1 {
     font-size: 1.75rem;
-    margin: 0;
+    margin: 16px;
 }
 
 main > header img {
     height: 60px;
     width: 60px;
-    margin: 0;
+    margin: 16px;
 }

@@ -1,6 +1,7 @@
 import './Requerimentos.css';
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import TabelaRequerimentos from "../components/TabelaRequerimento";
 
 function Requerimentos() {
     return (
@@ -9,7 +10,8 @@ function Requerimentos() {
             <main>
                 <Topbar />
                 <h2>Meus Requerimentos</h2>
-                <section></section>
+                <h3>Faça solicitações online para a secretaria</h3>
+                <TabelaRequerimentos />
             </main>
         </div>
     );
