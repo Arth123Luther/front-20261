@@ -1,4 +1,4 @@
-/* TabelaNotas.css */
+
 .notas-section {
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 .notas-card {
-    border: 1px solid var(--cor-borda);
+    border: 2px solid var(--cor-fundo);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -18,7 +18,7 @@
     font-weight: bold;
     padding: 8px 12px;
     background-color: var(--cor-fundo);
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 2px solid var(--cor-fundo);
     margin: 0;
 }
 
@@ -29,9 +29,9 @@
 
 .notas-table th,
 .notas-table td {
-    padding: 10px 14px;
+    padding: 10px 10px;
     text-align: left;
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 2px solid var(--cor-fundo);
 }
 
 .notas-table th {

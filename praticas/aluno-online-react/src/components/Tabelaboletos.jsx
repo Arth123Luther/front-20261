@@ -3,7 +3,6 @@ import './Tabelaboletos.css';
 function TabelaBoletos() {
     return (
         <section className="boletos-section">
-            <h3>Histórico de Pagamentos</h3>
             <table className="boletos-table">
                 <thead>
                     <tr>

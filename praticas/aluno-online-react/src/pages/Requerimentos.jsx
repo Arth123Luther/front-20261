@@ -1,6 +1,6 @@
 import './Requerimentos.css';
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import TopbarRequerimento from "../components/TopbarRequerimento";
 import TabelaRequerimentos from "../components/TabelaRequerimento";
 
 function Requerimentos() {
@@ -8,9 +8,8 @@ function Requerimentos() {
         <div className="requerimentos-wrapper">
             <Sidebar />
             <main>
-                <Topbar />
-                <h2>Meus Requerimentos</h2>
-                <h3>Faça solicitações online para a secretaria</h3>
+                <TopbarRequerimento />
+                <h2>Faça solicitações online para a secretaria</h2>
                 <TabelaRequerimentos />
             </main>
         </div>

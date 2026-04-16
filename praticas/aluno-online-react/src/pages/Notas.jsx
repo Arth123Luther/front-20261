@@ -1,6 +1,6 @@
 import './Notas.css';
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import TopbarNota from "../components/TopbarNota";
 import TabelaNotas from "../components/TabelaNotas";
 
 function Notas() {
@@ -8,8 +8,8 @@ function Notas() {
         <div className="notas-wrapper">
             <Sidebar />
             <main>
-                <Topbar />
-                <h2>Minhas Notas</h2>
+                <TopbarNota />
+                <h2>Histórico de Notas por Semestre</h2>
                 <TabelaNotas />
             </main>
         </div>

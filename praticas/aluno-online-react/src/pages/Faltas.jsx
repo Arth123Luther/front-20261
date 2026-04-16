@@ -1,6 +1,6 @@
 import './Faltas.css';
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import TopbarFalta from "../components/TopbarFalta";
 import TabelaFaltas from "../components/TabelaFaltas";
 
 function Faltas() {
@@ -8,7 +8,7 @@ function Faltas() {
         <div className="faltas-wrapper">
             <Sidebar />
             <main>
-                <Topbar />
+                <TopbarFalta />
                 <h2>Histórico de Faltas por Semestre</h2>
                 <TabelaFaltas />
             </main>

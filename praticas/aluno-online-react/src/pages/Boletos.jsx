@@ -1,6 +1,6 @@
 import './Boletos.css';
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import TopbarBoleto from "../components/TopbarBoleto";
 import TabelaBoletos from "../components/Tabelaboletos";
 
 function Boletos() {
@@ -8,8 +8,8 @@ function Boletos() {
         <div className="boletos-wrapper">
             <Sidebar />
             <main>
-                <Topbar />
-                <h2>Meus Boletos</h2>
+                <TopbarBoleto />
+                <h2>Histórico de Pagamentos</h2>
                 <TabelaBoletos />
             </main>
         </div>

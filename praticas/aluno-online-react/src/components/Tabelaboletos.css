@@ -1,19 +1,13 @@
 
 .boletos-section {
-    padding: 24px;
+    padding: 20px;
     margin-top: 4px;
-}
-
-.boletos-section h3 {
-    text-align: left;
-    font-size: 1.1rem;
-    margin-bottom: 6px;
 }
 
 .boletos-table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid var(--cor-borda);
+    border: 1px solid var(--cor-fundo);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -21,13 +15,13 @@
 .boletos-table th {
     padding: 20px 14px;
     text-align: left;
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-fundo);
 }
 
 .boletos-table td {
-    padding: 20px 14px;
+    padding: 10px 14px;
     text-align: left;
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-fundo);
 }
 
 .boletos-table th {

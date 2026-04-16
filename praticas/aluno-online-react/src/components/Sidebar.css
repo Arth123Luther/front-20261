@@ -1,6 +1,6 @@
 
 aside {
-    width: 312px;
+    width: 310px;
     background-color: var(--cor-fundo);
     height: 100vh;
     position: fixed;
@@ -17,14 +17,14 @@ aside > header {
 }
 
 aside > header img {
-    height: 40px;
-    width: 40px;
-    margin: 0;
+    margin: 8px;
+    height: 60px;
+    width: 60px;
 }
 
 aside > header h1 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.6rem;
 }
 
 @media (width >= 768px) {
