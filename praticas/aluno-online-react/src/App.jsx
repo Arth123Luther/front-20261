@@ -5,7 +5,7 @@ import Boletos from './pages/Boletos';
 import Requerimentos from './pages/Requerimentos';
 
 function App() {
-  const pagina = 0;
+  const pagina = 1;
 
   switch(pagina) {
     case 1: return <Dashboard />

@@ -1,18 +1,15 @@
-import './Requerimentos.css';
+import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
-import TopbarRequerimento from "../components/TopbarRequerimento";
-import TabelaRequerimentos from "../components/TabelaRequerimento";
+import Tabela from "../components/Tabela";
 
-function Requerimentos() {
+function Requerimentos(props) {
     return (
-        <div className="requerimentos-wrapper">
-            <Sidebar />
-            <main>
-                <TopbarRequerimento />
-                <h2>Faça solicitações online para a secretaria</h2>
-                <TabelaRequerimentos />
-            </main>
-        </div>
+        <>
+            <Sidebar navegaPara={props.navegaPara} />
+            <Main titulo="Meus Requerimentos" subtitulo="Faça solicitações online para a Secretaria">
+                <Tabela colunas={[]} dados={[]}/>
+            </Main>
+        </>
     );
 }
 

@@ -1,18 +1,15 @@
-import './Boletos.css';
+import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
-import TopbarBoleto from "../components/TopbarBoleto";
-import TabelaBoletos from "../components/Tabelaboletos";
+import Tabela from "../components/Tabela";
 
-function Boletos() {
+function Boletos(props) {
     return (
-        <div className="boletos-wrapper">
-            <Sidebar />
-            <main>
-                <TopbarBoleto />
-                <h2>Histórico de Pagamentos</h2>
-                <TabelaBoletos />
-            </main>
-        </div>
+        <>
+            <Sidebar navegaPara={props.navegaPara} />
+            <Main titulo="Meus Boletos" subtitulo="Histórico de Pagamentos">
+                <Tabela colunas={[]} dados={[]}/>
+            </Main>
+        </>
     );
 }
 
