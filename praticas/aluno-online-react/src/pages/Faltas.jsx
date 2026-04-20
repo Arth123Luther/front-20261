@@ -2,7 +2,7 @@ import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
 import Tabela from "../components/Tabela";
 
-function Faltas() {
+function Faltas(props) {
     const colunas = [
         "Disciplina",
         "Total de Faltas",
@@ -29,7 +29,7 @@ function Faltas() {
 
     return (
         <>
-            <Sidebar />
+            <Sidebar navegaPara={props.navegaPara} />
             <Main titulo="Minhas Faltas" subtitulo="Histórico de Faltas por Semestre">
                 <Tabela titulo="2026.1" colunas={colunas} dados={dados[0]}/>
                 <Tabela titulo="2025.2" colunas={colunas} dados={dados[1]}/>
