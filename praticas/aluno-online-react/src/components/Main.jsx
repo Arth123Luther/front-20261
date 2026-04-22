@@ -1,13 +1,13 @@
-import './Main.css';
 import Topbar from './Topbar';
-import Card from './Card';
 
-function Main() {
+function Main(props) {
     return (
-        <main>
-            <Topbar />
-            <h2>Bem-vindo ao portal do aluno</h2>
-            <Card />
+        <main className='flex flex-1 flex-col justify-center px-2 md:ml-[370px] md:mr-4 md:max-w-[800px]'>
+            <Topbar titulo={props.titulo}/>
+            <h2 className='text-left text-[1.75rem] font-bold ml-4 mb-6'>{props.subtitulo}</h2>
+            <section className='flex flex-col gap-6'>
+            {props.children}
+            </section>
         </main>
     );
 }

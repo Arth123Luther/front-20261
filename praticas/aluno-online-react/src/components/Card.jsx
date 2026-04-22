@@ -1,34 +1,15 @@
-import './Card.css';
 
-function Card() {
+function Card(props) {
     return (
-        <section className="card-section">
-            <article>
-                <h3>Mural de Avisos</h3>
-                <ul>
-                    <li>Inscrição para o projeto de extensão</li>
-                    <li>Eleição para representante de turma</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Calendário Acadêmico</h3>
-                <ul>
-                    <li>23/02 - Início do período letivo 2026-1</li>
-                    <li>25/04 - Prazo final para aplicação da P1</li>
-                    <li>23/06 - Prazo final para aplicação da P2</li>
-                    <li>04/07 - Fim do período letivo 2026-1</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Minhas Disciplinas</h3>
-                <ul>
-                    <li>BI e Data Warehousing</li>
-                    <li>Construção de Frontend</li>
-                    <li>Desenvolvimento de Backend</li>
-                </ul>
-            </article>
-        </section>
-    );
+        <article className="border-2 border-[#e9e9e9] rounded-xl overflow-hidden mb-2">
+          <h3 className="text-left px-5 py-3 font-bold text-lg bg-[#e9e9e9] border-b border-[#e9e9e9] m-0">{props.titulo}</h3>
+          <ul className="flex flex-col list-none px-2 py-1 gap-3 m-0">
+            {props.itens.map((item, index) => (
+              <li className="text-left px-1 py-1" key={index}>{item}</li>
+            ))}
+          </ul>
+        </article>
+    )
 }
 
 export default Card;
