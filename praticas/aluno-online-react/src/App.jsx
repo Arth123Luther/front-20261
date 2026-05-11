@@ -1,22 +1,26 @@
+import { Routes, Route } from 'react-router';
+import Layout from './layouts/Layout';
 import Dashboard from './pages/Dashboard';
 import Notas from './pages/Notas';
 import Faltas from './pages/Faltas';
 import Boletos from './pages/Boletos';
 import Requerimentos from './pages/Requerimentos';
 import Login from './pages/Login';
-import { useState } from 'react';
 
 function App() {
-  const [pagina, setPagina] = useState();
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
 
-  switch(pagina) {
-    case 1: return <Dashboard navegaPara={setPagina} />
-    case 2: return <Notas navegaPara={setPagina} />
-    case 3: return <Faltas navegaPara={setPagina} />
-    case 4: return <Boletos navegaPara={setPagina} />
-    case 5: return <Requerimentos navegaPara={setPagina} />
-    default: return <Login navegaPara={setPagina} />
-  }
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="notas" element={<Notas />} />
+        <Route path="faltas" element={<Faltas />} />
+        <Route path="boletos" element={<Boletos />} />
+        <Route path="requerimentos" element={<Requerimentos />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
