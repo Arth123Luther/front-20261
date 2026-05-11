@@ -5,9 +5,11 @@ import Perfil from './pages/Perfil';
 import Settings from './pages/Settings';
 import Erro404 from './pages/Erro404';
 import Layout from './layouts/Layout';
+import Login from './pages/Login';
 
 function App() {
-  return <Routes>
+  return (
+  <Routes>
     <Route element={<Layout />}>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -15,7 +17,9 @@ function App() {
       <Route path="/settings" element={<Settings />} />
       <Route path='*' element={<Erro404 />} />
     </Route>
+    <Route path="/login" element={<Login/>} />
   </Routes>
+  );
 }
 
 export default App;
