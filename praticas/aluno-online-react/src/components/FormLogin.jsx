@@ -2,12 +2,14 @@ import InputEmail from "./InputEmail";
 import InputSenha from "./InputSenha";
 import InputSubmit from "./InputSubmit";
 import { useState } from "react";
+import { useNavigate } from 'react-router';
 
-function FormLogin({ navegaPara }) {
+function FormLogin() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [emailErro, setEmailErro] = useState('');
     const [senhaErro, setSenhaErro] = useState('');
+    const navigate = useNavigate();
 
     const resetEmail = (e) => {
         setEmail(e.target.value);
@@ -59,7 +61,7 @@ function FormLogin({ navegaPara }) {
         }
         
         if (!temErro) {
-            navegaPara(1);
+            navigate('/');
         }
     }
 
