@@ -1,5 +1,5 @@
 import user from '../assets/avatar.svg';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/UseAuth';
 
 function Topbar(props) {
     const { usuario } = useAuth();

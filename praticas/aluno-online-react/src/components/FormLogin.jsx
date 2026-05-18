@@ -2,7 +2,7 @@ import InputEmail from "./InputEmail";
 import InputSenha from "./InputSenha";
 import InputSubmit from "./InputSubmit";
 import { useState } from "react";
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from "../hooks/UseAuth";
 
 function FormLogin() {
     const [email, setEmail] = useState('');

@@ -6,7 +6,7 @@ import Faltas from './pages/Faltas';
 import Boletos from './pages/Boletos';
 import Requerimentos from './pages/Requerimentos';
 import Login from './pages/Login';
-import { useAuth } from './contexts/AuthContext';
+import { useAuth } from './hooks/UseAuth';
 
 function App() {
   const { autenticado } = useAuth();
