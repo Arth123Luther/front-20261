@@ -2,14 +2,14 @@ import InputEmail from "./InputEmail";
 import InputSenha from "./InputSenha";
 import InputSubmit from "./InputSubmit";
 import { useState } from "react";
-import { useNavigate } from 'react-router';
+import { useAuth } from '../contexts/AuthContext';
 
 function FormLogin() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [emailErro, setEmailErro] = useState('');
     const [senhaErro, setSenhaErro] = useState('');
-    const navigate = useNavigate();
+    const { login } = useAuth();
 
     const resetEmail = (e) => {
         setEmail(e.target.value);
@@ -23,12 +23,12 @@ function FormLogin() {
 
     const travaSubmit = (e) => {
         e.preventDefault();
-        
+
         setEmailErro('');
         setSenhaErro('');
-        
+
         let temErro = false;
-        
+
         if (!email) {
             setEmailErro('Email é obrigatório');
             temErro = true;
@@ -41,17 +41,15 @@ function FormLogin() {
             if (!temArroba || !temPonto) {
                 setEmailErro('Email inválido');
                 temErro = true;
-            }
-            else if (posicaoArroba === email.length - 1) {
+            } else if (posicaoArroba === email.length - 1) {
                 setEmailErro('Email inválido');
                 temErro = true;
-            }
-            else if (posicaoPonto === email.length - 1) {
+            } else if (posicaoPonto === email.length - 1) {
                 setEmailErro('Email inválido');
                 temErro = true;
             }
         }
-        
+
         if (!senha) {
             setSenhaErro('Senha é obrigatória');
             temErro = true;
@@ -59,28 +57,26 @@ function FormLogin() {
             setSenhaErro('Senha deve ter no mínimo 6 caracteres');
             temErro = true;
         }
-        
+
         if (!temErro) {
-            navigate('/');
+            login({ email });
         }
-    }
+    };
 
     return (
-    <form onSubmit={travaSubmit} className="space-y-4">
-        <InputEmail 
-            email={email}
-            erro={emailErro}
-            mudaValor={resetEmail}
-        />
-        <InputSenha 
-            senha={senha}
-            erro={senhaErro}
-            mudaValor={resetSenha}
-        />
-        <InputSubmit 
-            texto="Entrar"
-        />
-    </form>
+        <form onSubmit={travaSubmit} className="space-y-4">
+            <InputEmail
+                email={email}
+                erro={emailErro}
+                mudaValor={resetEmail}
+            />
+            <InputSenha
+                senha={senha}
+                erro={senhaErro}
+                mudaValor={resetSenha}
+            />
+            <InputSubmit texto="Entrar" />
+        </form>
     );
 }
 

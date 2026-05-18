@@ -1,9 +1,18 @@
 import './Menu.css';
-import { Link, NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
+import { useAuth } from '../contexts/AuthContext';
 
 function Menu() {
+    const { logout } = useAuth();
+    const navigate = useNavigate();
+
     const linkClass = ({ isActive }) =>
         `text-[#303030] no-underline px-2 py-2 block font-semibold text-lg ${isActive ? 'active' : ''}`;
+
+    const handleLogout = () => {
+        logout();
+        navigate('/login');
+    };
 
     return (
         <nav>
@@ -26,9 +35,12 @@ function Menu() {
                     <NavLink className={linkClass} to="/requerimentos">Requerimentos</NavLink>
                 </li>
                 <li className="list-disc my-4 ml-4">
-                    <Link className="text-[#303030] no-underline px-2 py-2 block font-semibold text-lg" to="/login">
+                    <button
+                        onClick={handleLogout}
+                        className="text-[#303030] px-2 py-2 block font-semibold text-lg cursor-pointer bg-transparent border-none w-full text-left"
+                    >
                         Sair
-                    </Link>
+                    </button>
                 </li>
             </ul>
         </nav>
