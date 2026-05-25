@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router";
 import Main from "../components/Main";
 import Tabela from "../components/Tabela";
 
 function Requerimentos() {
+    const navigate = useNavigate();
+
     const colunas = [
-        "Tipo de Requerimento", 
-        "Data de Solicitação", 
+        "Tipo de Requerimento",
+        "Data de Solicitação",
         "Situação"];
-        
+
     const dados = [
         ["Revisão de Menção", "15/12/2025", "Indeferido"],
         ["Dispensa de Disciplina", "12/06/2025", "Indeferido"],
@@ -17,7 +20,10 @@ function Requerimentos() {
 
     return (
         <Main titulo="Meus Requerimentos" subtitulo="Faça solicitações online para a secretaria">
-            <Tabela colunas={colunas} dados={dados}/>
+            <button onClick={() => navigate("/requerimentos/novo")}>
+                ➕ Novo Requerimento
+            </button>
+            <Tabela colunas={colunas} dados={dados} />
         </Main>
     );
 }
