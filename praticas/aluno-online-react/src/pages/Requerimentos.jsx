@@ -20,7 +20,10 @@ function Requerimentos() {
 
     return (
         <Main titulo="Meus Requerimentos" subtitulo="Faça solicitações online para a secretaria">
-            <button onClick={() => navigate("/requerimentos/novo")}>
+            <button
+                className="self-start items-center gap-2 bg-[#303030] text-white font-semibold px-5 py-2 rounded-lg hover:bg-[#555] transition-colors cursor-pointer"
+                onClick={() => navigate("/requerimentos/novo")}
+            >
                 ➕ Novo Requerimento
             </button>
             <Tabela colunas={colunas} dados={dados} />
