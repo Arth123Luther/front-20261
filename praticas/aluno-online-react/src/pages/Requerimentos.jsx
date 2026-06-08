@@ -1,22 +1,32 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Main from "../components/Main";
 import Tabela from "../components/Tabela";
+import { listar } from "../services/requerimentoService.js";
 
 function Requerimentos() {
     const navigate = useNavigate();
+    const [dados, setDados] = useState([]);
+
+    useEffect(() => {
+        async function carregar() {
+            const lista = await listar();
+
+        const dadosFormatados = lista.map(item => [
+            item.tipo,
+            item.data,
+            item.status || "Pendente"
+        ]);
+
+        setDados(dadosFormatados);
+        };
+    carregar();
+    }, []);
 
     const colunas = [
         "Tipo de Requerimento",
         "Data de Solicitação",
         "Situação"];
-
-    const dados = [
-        ["Revisão de Menção", "15/12/2025", "Indeferido"],
-        ["Dispensa de Disciplina", "12/06/2025", "Indeferido"],
-        ["Trancamento de Matrícula", "05/01/2024", "Deferido"],
-        ["Mudança de Turno", "10/10/2023", "Deferido"],
-        ["Renovação de Matrícula", "10/02/2023", "Deferido"],
-    ];
 
     return (
         <Main titulo="Meus Requerimentos" subtitulo="Faça solicitações online para a secretaria">

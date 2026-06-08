@@ -1,0 +1,26 @@
+{
+  "requerimentos": [
+    {
+      "tipo": "Revisão de Menção",
+      "descricao": "Pedido de revisão de nota",
+      "data": "15/12/2025",
+      "status": "Pendente",
+      "id": "hw4Sb-Atb1g"
+    },
+    {
+      "data": "08/06/2026",
+      "status": "Pendente",
+      "tipo": "Revisão de Menção",
+      "descricao": "'1'2'12'121212312",
+      "id": "r4scD_oWfvA"
+    },
+    {
+      "data": "08/06/2026",
+      "status": "Pendente",
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "3132123123123123",
+      "id": "3qaoNFVYv4Q"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

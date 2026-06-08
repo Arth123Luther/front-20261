@@ -3,15 +3,27 @@ import { createContext, useState } from "react";
 const AuthContext = createContext(null);
 
 function AuthProvider({ children }) {
-    const [autenticado, setAutenticado] = useState(false);
-    const [usuario, setUsuario] = useState(null);
+    const [autenticado, setAutenticado] = useState(() => {
+        return localStorage.getItem("autenticado") === "true";
+    });
+    
+    const [usuario, setUsuario] = useState(() => {
+        const salvo = localStorage.getItem("usuario");
+        return salvo ? JSON.parse(salvo) : null;
+    });
 
     function login(dados) {
+        localStorage.setItem("autenticado", "true");
+        localStorage.setItem("usuario", JSON.stringify(dados));
+        
         setUsuario(dados);
         setAutenticado(true);
     }
 
     function logout() {
+        localStorage.removeItem("autenticado");
+        localStorage.removeItem("usuario");
+        
         setUsuario(null);
         setAutenticado(false);
     }
@@ -23,4 +35,4 @@ function AuthProvider({ children }) {
     );
 }
 
-export {AuthContext, AuthProvider}
+export { AuthContext, AuthProvider };
