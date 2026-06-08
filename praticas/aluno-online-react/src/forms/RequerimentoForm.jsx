@@ -21,7 +21,7 @@ function RequerimentoForm() {
         reset({ data: today, status: "Pendente" });
         navigate("/requerimentos");
     } catch(error) {
-      return {message: `Erro ao enviar requerimento` };
+      return {message: `Deu ruim! ${error.code}-${error.message}` };
     }
 }
 

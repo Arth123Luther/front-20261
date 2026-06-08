@@ -9,7 +9,7 @@ export async function cadastro(servico) {
       });
       return await resposta.json();
     } catch(error) {
-      return {message: `Erro ao criar` };
+      return {message: `Deu ruim! ${error.code}-${error.message}` };
     }
 }
 
@@ -18,6 +18,6 @@ export async function listar() {
       const resposta = await fetch(url);
       return await resposta.json();
     } catch(error) {
-      return {message: `Erro ao listar requerimentos!` };
+      return {message: `Deu ruim! ${error.code}-${error.message}` };
     }
 }
