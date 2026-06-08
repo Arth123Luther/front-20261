@@ -1,23 +1,30 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import Main from "../components/Main";
+import { cadastro } from "../services/requerimentoService.js";
 
 function RequerimentoForm() {
   const navigate = useNavigate();
-
   const today = new Date().toLocaleDateString("pt-BR");
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
     defaultValues: {
       data: today,
+      status: "Pendente"
     },
   });
 
-  function onSubmit(dados) {
-    console.log("Novo requerimento:", dados);
-    reset({ data: today });
-    navigate("/requerimentos");
-  }
+  async function onSubmit(dados) {
+    try {
+        await cadastro(dados);
+        alert("Requerimento enviado com sucesso!");
+        reset({ data: today, status: "Pendente" });
+        navigate("/requerimentos");
+    } catch(error) {
+      return {message: `Deu ruim! ${error.code}-${error.message}` };
+    }
+}
+
 
   return (
     <Main titulo="Meus Requerimentos" subtitulo="Novo Requerimento">
